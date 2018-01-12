@@ -835,7 +835,8 @@ static void _glfmUpdateKeyboardVisibility(GLFMPlatformData *platformData) {
         const int minimumKeyboardSize = (int)(100 * platformData->scale);
         int largestIndex = 0;
         int largestArea = -1;
-        for (int i = 0; i < 4; i++) {
+        int i;
+        for (i = 0; i < 4; i++) {
             int w = nonVisibleRect[i].right - nonVisibleRect[i].left;
             int h = nonVisibleRect[i].bottom - nonVisibleRect[i].top;
             int area = w * h;
